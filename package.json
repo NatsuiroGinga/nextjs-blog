@@ -12,9 +12,17 @@
     "@types/node": "18.11.10",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.9",
+    "gray-matter": "^4.0.3",
+    "grey-matter": "^0.0.0",
     "next": "13.0.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-markdown": "^8.0.4",
+    "react-syntax-highlighter": "^15.5.0",
+    "remark-gfm": "^3.0.1",
     "typescript": "4.9.3"
+  },
+  "devDependencies": {
+    "@types/react-syntax-highlighter": "^15.5.5"
   }
 }
