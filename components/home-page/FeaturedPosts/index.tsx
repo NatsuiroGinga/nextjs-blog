@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./index.module.css";
 import PostsGrid from "@/components/posts/PostsGrid";
+import { Post } from "@/components/posts";
 
 interface Props {
   posts: Post[];

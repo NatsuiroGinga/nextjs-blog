@@ -25,7 +25,7 @@ function About() {
 export default About;
 ```
 
-![7ea0e5ece21f460dade7d21d512cf531.png](/images/posts/file-based-routing/7ea0e5ece21f460dade7d21d512cf531.png)
+![7ea0e5ece21f460dade7d21d512cf531.png](7ea0e5ece21f460dade7d21d512cf531.png)
 
 ## 默认路由
 
@@ -48,6 +48,8 @@ const About: React.FC = () => (
 
 export default About;
 ```
+
+![5e46bf2aa1e64f59aad08a080eaa27ae.png](5e46bf2aa1e64f59aad08a080eaa27ae.png)
 
 ## 具有动态路由的页面
 
@@ -80,6 +82,10 @@ const PortfolioProjectPage: React.FC = () => {
 export default PortfolioProjectPage;
 ```
 
+![6b9985e3d0e94f5dad50388cf38eec5c.png](6b9985e3d0e94f5dad50388cf38eec5c.png)
+
+![39a408c36f8e46fbbe4ec5c42f45fbcd.png](39a408c36f8e46fbbe4ec5c42f45fbcd.png)
+
 ## 多个嵌套的动态路由字段
 
 可以使用[...whateverNameYouWant].tsx获取所有嵌套的路由字段.
@@ -108,6 +114,8 @@ const BlogPostPage: React.FC = () => {
 
 export default BlogPostPage;
 ```
+
+![d5e1ea020e494318abd06f5532449f12.png](d5e1ea020e494318abd06f5532449f12.png)
 
 ## 导航(Navigation)
 

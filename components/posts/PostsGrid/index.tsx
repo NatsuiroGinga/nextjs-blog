@@ -1,6 +1,7 @@
 import React from "react";
 import PostItem from "@/components/posts/PostItem";
 import styles from "./index.module.css";
+import { Post } from "@/components/posts";
 
 interface Props {
   posts: Post[];

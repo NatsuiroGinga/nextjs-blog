@@ -1,7 +1,9 @@
 import React from "react";
 import PostContent from "@/components/posts/post-detail/PostContent";
 import { GetStaticPaths, GetStaticProps } from "next";
-import { getAllPosts, getFeaturedPosts } from "@/pages/api/post";
+import { getFeaturedPostFiles, getPostData } from "@/pages/api/post";
+import { getDefaultRandomRevalidate } from "@/utils/common";
+import { Post } from "@/components/posts";
 
 interface Props {
   post: Post;
@@ -18,24 +20,23 @@ const PostDetailPage: React.FC<Props> = (props) => {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const { slug } = context.params!;
-  const allPosts = getAllPosts();
-  const post = allPosts.find((post) => post.slug === slug);
+  const postData = getPostData(slug as string);
 
   return {
     props: {
-      post
+      post: postData
     },
-    revalidate: 60 * 60 * 24 // 24 hours
+    revalidate: getDefaultRandomRevalidate(10, 15), // 10 - 15 minutes
   };
 }
 
+// 生成精选文章页面
 export const getStaticPaths: GetStaticPaths = async () => {
-  const featuredPosts = getFeaturedPosts();
-  const slugs = featuredPosts.map((post) => post.slug);
+  const slugs = getFeaturedPostFiles();
 
   return {
-    paths: slugs.map((slug) => ({ params: { slug } })),
-    fallback: true
+    paths: slugs.map(slug => ({ params: { slug } })),
+    fallback: "blocking"
   };
 }
 

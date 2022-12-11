@@ -3,6 +3,8 @@ import Hero from "@/components/home-page/Hero";
 import FeaturedPosts from "@/components/home-page/FeaturedPosts";
 import { GetStaticProps } from "next";
 import { getFeaturedPosts } from "@/pages/api/post";
+import { getDefaultRandomRevalidate } from "@/utils/common";
+import { Post } from "@/components/posts";
 
 interface Props {
   posts: Post[];
@@ -24,7 +26,7 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       posts: featuredPosts
     },
-    revalidate: 60 * 60 * 24 // 24 hours
+    revalidate: getDefaultRandomRevalidate(10, 15), // 10 - 15 minutes
   };
 }
 

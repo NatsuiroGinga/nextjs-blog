@@ -18,7 +18,9 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    // 从当前项目根路径开始
     "baseUrl": ".",
+    // 配置别名, 可以忽略
     "paths": {
       "@/*": [
         "./*"

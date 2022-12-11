@@ -1,7 +1,9 @@
 import React from "react";
-import AllPosts from "@/components/posts/AllPosts";
+import AllPosts from "components/posts/AllPosts";
 import { GetStaticProps } from "next";
-import { getAllPosts } from "@/pages/api/post";
+import { getAllPosts } from "pages/api/post";
+import { getDefaultRandomRevalidate } from "@/utils/common";
+import { Post } from "@/components/posts";
 
 interface Props {
   posts: Post[];
@@ -20,7 +22,7 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       posts
     },
-    revalidate: 60 * 60 * 24 // 24 hours
+    revalidate: getDefaultRandomRevalidate(10, 15), // 10 - 15 minutes
   };
 }
 

@@ -1,8 +1,9 @@
 import { postImageLoader, postLoader } from "./loader";
-import { handler } from "./request";
+import request, { Result } from "./request";
 
 export {
   postImageLoader,
   postLoader,
-  handler,
+  request
 };
+export type { Result };
