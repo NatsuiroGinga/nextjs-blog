@@ -2,11 +2,11 @@ import React from "react";
 import PostHeader from "@/components/posts/post-detail/PostHeader";
 import ReactMarkdown from "react-markdown";
 import Image from "next/image";
-import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import styles from "./index.module.css";
 import { postImageLoader } from "@/utils";
 import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 import { Post } from "@/components/posts";
+import SyntaxHighlighter from "react-syntax-highlighter/dist/cjs/prism";
 
 interface Props extends Post {
 }
