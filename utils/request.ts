@@ -14,7 +14,7 @@ interface Result {
 export function request<T>(config: AxiosRequestConfig<T>): Promise<Result> {
   // 1.创建axios的实例
   const instance = axios.create({
-    baseURL: 'http://localhost:8080',
+    baseURL: 'http://1.15.132.159:8080',
     //设置请求超时时间
     timeout: 5000,
   })
