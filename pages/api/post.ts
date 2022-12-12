@@ -3,6 +3,7 @@ import * as path from "path";
 import matter from "gray-matter";
 import { Post } from "@/components/posts";
 
+// 设置Node.js运行时的工作目录
 const postsDirectory = path.join(process.cwd(), 'public/posts')
 
 /**
