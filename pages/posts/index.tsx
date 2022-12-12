@@ -4,14 +4,21 @@ import { GetStaticProps } from "next";
 import { getAllPosts } from "pages/api/post";
 import { getDefaultRandomRevalidate } from "@/utils/common";
 import { Post } from "@/components/posts";
+import Head from "next/head";
 
-interface Props {
+interface AllPostsPageProps {
   posts: Post[];
 }
 
-const AllPostsPage: React.FC<Props> = (props) => {
+const AllPostsPage: React.FC<AllPostsPageProps> = (props) => {
   return (
-    <AllPosts posts={ props.posts }/>
+    <>
+      <Head>
+        <title>All Posts</title>
+        <meta name={ "description" } content={ "A list of posts" }/>
+      </Head>
+      <AllPosts posts={ props.posts }/>
+    </>
   );
 };
 

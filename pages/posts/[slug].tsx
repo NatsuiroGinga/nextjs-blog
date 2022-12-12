@@ -4,18 +4,27 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import { getFeaturedPostFiles, getPostData } from "@/pages/api/post";
 import { getDefaultRandomRevalidate } from "@/utils/common";
 import { Post } from "@/components/posts";
+import Head from "next/head";
 
-interface Props {
+interface PostDetailPageProps {
   post: Post;
 }
 
-const PostDetailPage: React.FC<Props> = (props) => {
+const PostDetailPage: React.FC<PostDetailPageProps> = (props) => {
 
   if (!props.post) {
     return <p>Loading...</p>
   }
 
-  return <PostContent { ...props.post }/>;
+  return (
+    <>
+      <Head>
+        <title>{ props.post.title }</title>
+        <meta name={ "description" } content={ props.post.excerpt }/>
+      </Head>
+      <PostContent { ...props.post }/>
+    </>
+  );
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
