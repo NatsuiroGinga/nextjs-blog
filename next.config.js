@@ -3,7 +3,7 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  env: {
+  env: { // 环境变量
     protocol: 'http',
     host: 'natsuiroginga.work',
     port: 8080,

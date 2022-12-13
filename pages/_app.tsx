@@ -9,7 +9,7 @@ const App: React.FC<AppProps> = ({ Component, pageProps }: AppProps) => {
     <Layout>
       <Head>
         <meta name={ "viewport" } content={ "width=device-width, initial-scale=1" }/>
-
+        <title>Ginga's Blog</title>
       </Head>
       <Component { ...pageProps } />
     </Layout>

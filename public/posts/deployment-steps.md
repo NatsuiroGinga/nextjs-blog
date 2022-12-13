@@ -3,7 +3,7 @@ title: Deployment Steps And Considerations
 date: '2022-12-11'
 image: 'deployment-steps.jpg'
 excerpt: Next.js Application's Deployment Steps And Considerations
-isFeatured: true
+isFeatured: false
 ---
 
 # 1. Add page metadata

@@ -1,14 +1,31 @@
 import React from "react";
-import PostHeader from "@/components/posts/post-detail/PostHeader";
+import PostHeader from "components/posts/post-detail/PostHeader";
 import ReactMarkdown from "react-markdown";
 import Image from "next/image";
-import styles from "./index.module.css";
-import { postImageLoader } from "@/utils";
-import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
-import { Post } from "@/components/posts";
-import SyntaxHighlighter from "react-syntax-highlighter/dist/cjs/prism";
+import styles from "./index.module.scss";
+import { postImageLoader } from "utils";
+import atomDark from "react-syntax-highlighter/dist/cjs/styles/prism/atom-dark";
+import { Post } from "components/posts";
+import js from "react-syntax-highlighter/dist/cjs/languages/prism/javascript";
+import css from "react-syntax-highlighter/dist/cjs/languages/prism/css";
+import ts from "react-syntax-highlighter/dist/cjs/languages/prism/typescript";
+import scss from "react-syntax-highlighter/dist/cjs/languages/prism/scss";
+import jsx from "react-syntax-highlighter/dist/cjs/languages/prism/jsx";
+import tsx from "react-syntax-highlighter/dist/cjs/languages/prism/tsx";
+import bash from "react-syntax-highlighter/dist/cjs/languages/prism/bash";
+import nginx from "react-syntax-highlighter/dist/cjs/languages/prism/nginx";
+import { PrismLight as SyntaxHighlighter } from "react-syntax-highlighter";
 
-interface Props extends Post {
+SyntaxHighlighter.registerLanguage("js", js);
+SyntaxHighlighter.registerLanguage("css", css);
+SyntaxHighlighter.registerLanguage("ts", ts);
+SyntaxHighlighter.registerLanguage("scss", scss);
+SyntaxHighlighter.registerLanguage("jsx", jsx);
+SyntaxHighlighter.registerLanguage("tsx", tsx);
+SyntaxHighlighter.registerLanguage("bash", bash);
+SyntaxHighlighter.registerLanguage("nginx", nginx);
+
+interface PostContentProps extends Post {
 }
 
 /**
@@ -21,7 +38,13 @@ interface Props extends Post {
  * @param content 文章内容
  * @return 文章内容
  **/
-const PostContent: React.FC<Props> = ({ image, slug, title, content }) => {
+const PostContent: React.FC<PostContentProps> = ({
+  image,
+  slug,
+  title,
+  content
+}) => {
+
   const headerImageConfig = {
     image,
     slug,
