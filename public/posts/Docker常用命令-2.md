@@ -37,3 +37,20 @@ docker run -v [volume_name]:[container_path] [image_name]
 - volume_name : 数据卷的名称
 - container_path : 容器内的路径
 - image_name : 镜像名称
+
+# 3. 便捷命令
+
+不用先创建数据卷, 创建容器时直接自动创建并挂载一个数据卷到某个容器目录
+
+```bash
+docker run --name container_name -p host_port:container_port -v local_volume_name:container_path -d image_name
+```
+
+解释:
+
+- container_name : 容器名称
+- host_port : 主机端口
+- container_port : 容器端口
+- local_volume_name : 主机内数据卷名称
+- container_path : 容器内的路径
+- image_name : 镜像名称
