@@ -2,7 +2,7 @@
 title: "Docker常用命令-2"
 date: "2022-12-13"
 image: "Docker常用命令-2.png"
-excerpt: "Docker数据卷常用命令"
+excerpt: "Docker数据卷和部署常用命令"
 isFeatured: true
 ---
 
@@ -61,3 +61,11 @@ docker run --name container_name -p host_port:container_port -v local_volume_nam
 
 - -v [宿主机目录]:[容器内目录]
 - -v [宿主机文件]:[容器内文件]
+
+# 5. 自定义镜像
+
+## 5.1 Dockerfile
+
+指令如下:
+
+![Dockerfile指令表格](dockerfile.jpg)
