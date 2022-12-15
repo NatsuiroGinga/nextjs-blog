@@ -6,6 +6,7 @@ excerpt: 'Nginx解决跨域'
 isFeatured: false
 ---
 
+
 前端项目域名是 http://a.xxxx.com, 后端的接口域名是 http://b.yyy.com:8080/api，然后后端接口没有设置跨域相关的响应设置头，因此就接口和我们
 域名就会存在跨域的情况，因此我们可以使用 nginx服务器来配置一下；
 

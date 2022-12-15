@@ -17,11 +17,13 @@ const HomePage: React.FC<HomePageProps> = (props) => {
     <>
       <Head>
         <title>Ginga's Blog</title>
-        <meta name={ "description" }
-              content={ "I post programming and web development" }/>
+        <meta
+          name={"description"}
+          content={"I post programming and web development"}
+        />
       </Head>
-      <Hero/>
-      <FeaturedPosts posts={ props.posts }/>
+      <Hero />
+      <FeaturedPosts posts={props.posts} />
     </>
   );
 };
@@ -31,10 +33,10 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
-      posts: featuredPosts
+      posts: featuredPosts,
     },
     revalidate: getDefaultRandomRevalidate(10, 15), // 10 - 15 minutes
   };
-}
+};
 
 export default HomePage;
