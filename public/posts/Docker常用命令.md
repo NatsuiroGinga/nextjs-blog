@@ -125,3 +125,23 @@ docker exec -it mn bash
 - -it : 给当前进入的容器创建一个标准输入、输出终端，允许我们与容器交互
 - mn : 要进入容器的名称
 - bash : 进入容器后执行的命令, bash 是 linux 终端交互命令
+
+## 3.6 退出容器
+
+```bash
+exit
+```
+
+## 3.7 删除容器
+
+先停止容器, 再删除容器
+
+```bash
+docker rm container_name
+```
+
+使用`-f`可以强制删除正在运行的容器, 不用先停止容器
+
+```bash
+docker rm -f container_name
+```
