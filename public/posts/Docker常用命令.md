@@ -44,7 +44,9 @@ docker pull mysql:5.7
 
 ## 2.6 docker save 保存镜像为一个压缩包
 
-选项: -o 输出文件的名称, 将镜像保存为一个压缩包
+选项:
+
+- -o 输出文件的名称, 将镜像保存为一个压缩包
 
 例如:
 
@@ -58,6 +60,12 @@ docker save -o my_nginx.tar
 
 - -i 读取文件的名称 , 将压缩包加载为镜像
 - -q 不输出加载信息
+
+例如:
+
+```bash
+docker load -i my_nginx.tar
+```
 
 # 3. 容器命令
 
