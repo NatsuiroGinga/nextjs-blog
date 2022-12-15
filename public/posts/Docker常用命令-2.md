@@ -54,3 +54,10 @@ docker run --name container_name -p host_port:container_port -v local_volume_nam
 - local_volume_name : 主机内数据卷名称
 - container_path : 容器内的路径
 - image_name : 镜像名称
+
+# 4. 目录挂载
+
+类似于数据卷挂载:
+
+- -v [宿主机目录]:[容器内目录]
+- -v [宿主机文件]:[容器内文件]
