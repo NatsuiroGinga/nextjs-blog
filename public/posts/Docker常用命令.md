@@ -2,7 +2,7 @@
 title: "Docker常用命令"
 date: "2022-12-15"
 image: "Docker常用命令.png"
-excerpt: "Docker常用命令"
+excerpt: "Docker常用镜像和容器操作命令"
 isFeatured: true
 ---
 
