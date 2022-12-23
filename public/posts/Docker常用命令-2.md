@@ -69,3 +69,29 @@ docker run --name container_name -p host_port:container_port -v local_volume_nam
 指令如下:
 
 ![Dockerfile指令表格](dockerfile.jpg)
+
+使用方法:
+
+```bash
+docker build -t image_name:tag .
+```
+
+"." 代表 Dockerfile 所在路径
+
+## 5.2 登录 dockerhub
+
+```bash
+docker login
+```
+
+## 5.3 给旧镜像起名
+
+```bash
+docker tag old_name:old_tag new_name:new_tag
+```
+
+## 5.4 推送到 docker hub
+
+```bash
+docker pull dockerhub_name/image_name:tag
+```
